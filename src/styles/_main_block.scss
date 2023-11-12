@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 50px 0 0;
     @include media-breakpoint-up(xl) {
       flex-direction: row;
-      padding: 150px 0;
+      padding: 150px 0 0;
+      margin-bottom: 100px;
     }
   }
 

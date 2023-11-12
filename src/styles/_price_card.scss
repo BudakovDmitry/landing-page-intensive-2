@@ -1,0 +1,58 @@
+.price_card {
+  border-radius: 20px;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.1);
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 30px;
+  @include media-breakpoint-up(xl) {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: $grey-secondary;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  &__price {
+    font-size: 54px;
+    color: $black-secondary;
+    font-weight: 700;
+    &_block {
+      font-size: 14px;
+      color: $grey-secondary;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+    &_item {
+      font-size: 14px;
+      color: $grey-secondary;
+      margin-bottom: 15px;
+      font-weight: 600;
+      list-style-image: url('img/list_item.svg');
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+    color: $black-primary;
+    height: 40px;
+    width: 130px;
+    font-weight: 600;
+    transition: all 0.2s ease-out;
+    &:hover {
+      background-color: $black-primary;
+      color: #ffffff;
+    }
+  }
+}
