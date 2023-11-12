@@ -16,6 +16,8 @@
   }
 
   &__image {
+    display: block;
+    max-width: 100%;
     &_container {
       width: 325px;
       height: 500px;
@@ -24,6 +26,7 @@
       box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);
       transform: rotate(-3deg);
       margin-bottom: 50px;
+      overflow: hidden;
       @include media-breakpoint-up(xl) {
         margin-bottom: 0;
       }
