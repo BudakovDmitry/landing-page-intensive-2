@@ -3,10 +3,12 @@
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.1);
   flex: 0 0 100%;
   max-width: 100%;
-  padding: 30px;
+  padding: 50px 30px;
+  margin-bottom: 50px;
   @include media-breakpoint-up(xl) {
     flex: 0 0 30%;
     max-width: 30%;
+    margin-bottom: 0;
   }
 
   &__title {
@@ -47,9 +49,14 @@
     border-radius: 8px;
     color: $black-primary;
     height: 40px;
-    width: 130px;
+    width: 100%;
     font-weight: 600;
     transition: all 0.2s ease-out;
+    margin: 0 auto;
+    @include media-breakpoint-up(xl) {
+      margin: 0;
+      width: 130px;
+    }
     &:hover {
       background-color: $black-primary;
       color: #ffffff;

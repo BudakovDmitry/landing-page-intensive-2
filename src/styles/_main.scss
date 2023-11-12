@@ -1,0 +1,7 @@
+.main {
+  @include media-breakpoint-up(xl) {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}
