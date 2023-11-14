@@ -17,10 +17,11 @@
 
   &__image {
     display: block;
-    max-width: 100%;
+    height: 100%;
+    border-radius: 40px;
     &_container {
-      width: 325px;
-      height: 500px;
+      width: 281px;
+      height: 400px;
       padding: 20px;
       border-radius: 60px;
       box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.1);
@@ -29,6 +30,8 @@
       overflow: hidden;
       @include media-breakpoint-up(xl) {
         margin-bottom: 0;
+        width: 414px;
+        height: 600px;
       }
     }
   }
@@ -36,19 +39,45 @@
   &__content {
     flex: 0 0 100%;
     max-width: 100%;
+    text-align: center;
     @include media-breakpoint-up(xl) {
       flex: 0 0 50%;
       max-width: 50%;
+      text-align: start;
     }
     &_title {
-      font-size: 72px;
+      font-size: 32px;
       font-weight: 700;
+      @include media-breakpoint-up(xl) {
+        font-size: 62px;
+      }
+      &_span {
+        text-transform: uppercase;
+        font-size: 42px;
+        @include media-breakpoint-up(xl) {
+          font-size: 92px;
+        }
+      }
     }
 
     &_description {
       color: $grey-third;
       font-size: 20px;
-      width: 70%;
+      width: 100%;
+      margin-bottom: 0;
+      @include media-breakpoint-up(xl) {
+        width: 70%;
+      }
+
+      &_date {
+        font-weight: 700;
+        font-size: 22px;
+        font-style: italic;
+      }
+
+      &.last {
+        margin-bottom: 30px;
+      }
     }
 
     &_link {
@@ -58,9 +87,18 @@
       border-radius: 12px;
       background-color: #222222;
       color: #ffffff;
-      max-width: 100px;
+      max-width: 100%;
       height: 40px;
       font-weight: 700;
+      transition: all 0.2s ease-out;
+      @include media-breakpoint-up(xl) {
+        max-width: 150px;
+      }
+
+      &:hover {
+        background-color: #F2F2F2;
+        color: #001122;
+      }
     }
   }
 }
